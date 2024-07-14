@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokemonApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeAPI AngularJS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="services/pokemon.service.js"></script>
+  <script src="components/pokemon-list.component.js"></script>
+  <script src="components/pokemon-detail.component.js"></script>
+  <script src="components/pokemon-summary.component.js"></script>
+  <script src="filters/capitalize.filter.js"></script>
+</head>
+<body>
+  <div class="container container-fluid">
+    <h1 class="text-center mb-5">Postulación Laboral: Api Pokemon</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-4">Listado de Pokemon</h2>
+        <pokemon-list></pokemon-list>
+      </div>
+      <div class="col-sm-10 col-md-6 d-flex justify-content-center">
+        <pokemon-detail></pokemon-detail>
+      </div>
+      <div class="col-12 col-md-6 mt-4">
+        <h2 class="mb-4">Tabla Resumen</h2>
+        <pokemon-summary></pokemon-summary>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

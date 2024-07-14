@@ -1,0 +1,27 @@
+<div>
+  <input style="margin-bottom: 50px;" type="text" ng-model="$ctrl.filterText" placeholder="Buscar Pokémon..." class="form-control" />
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Detalles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pokemon in $ctrl.pokemons | filter:$ctrl.filterText">
+        <td>{{pokemon.name}}</td>
+        <td><button class="btn btn-primary" ng-click="$ctrl.selectPokemon(pokemon.name)">Ver Detalles</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" ng-class="{disabled: $ctrl.page === 1}">
+        <a class="page-link" href="" ng-click="$ctrl.prevPage($event)">Anterior</a>
+      </li>
+      <li class="page-item" ng-class="{disabled: $ctrl.page === $ctrl.totalPages}">
+        <a class="page-link" href="" ng-click="$ctrl.nextPage($event)">Siguiente</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,16 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Letra</th>
+        <th class="text-center">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="entry in $ctrl.summary">
+        <td>{{entry.letter}}</td>
+        <td class="text-center">{{entry.count}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
